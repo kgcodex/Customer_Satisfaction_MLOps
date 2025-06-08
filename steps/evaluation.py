@@ -22,7 +22,7 @@ def evaluate_model(
         X_test (pd.DataFrame): Test features.
         y_test (pd.DataFrame): Test target variable.
     """
-    
+
     try:
         # Make predictions
         y_pred = model.predict(X_test)
@@ -42,7 +42,7 @@ def evaluate_model(
         logging.info(f"Root Mean Squared Error: {rmse_score}")
         logging.info(f"R-squared Score: {r2_score_value}")
 
-        return r2_score,rmse
+        return r2_score_value,rmse_score
 
     except Exception as e:
         logging.error(f"Error in evaluating model: {e}")

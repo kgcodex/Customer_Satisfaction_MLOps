@@ -9,9 +9,7 @@ from .config import ModelNameConfig
 @step
 def train_model(
     X_train: pd.DataFrame,
-    X_test: pd.DataFrame,
     y_train: pd.Series,
-    y_test: pd.Series,
     config: ModelNameConfig) -> RegressorMixin:
 
     """

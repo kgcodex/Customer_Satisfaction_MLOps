@@ -85,7 +85,7 @@ class RMSE(Evaluation):
         """
         
         try:
-            rmse = mean_squared_error(y_true, y_pred, squared=False)
+            rmse = np.sqrt(mean_squared_error(y_true, y_pred))
             logging.info(f"Root Mean Squared Error: {rmse}")
             return rmse
         except Exception as e:
